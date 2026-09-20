@@ -1,6 +1,6 @@
 # Cat Royale 
 
-A website where users can rank randomly selected cats.
+A website where users can rank randomly selected cats, until only the cutest remains.
 
 This is my first full web development project, built as a way to learn how a modern website works from development through deployment while doing something silly :)
 
@@ -24,10 +24,9 @@ This is the roadmamp i'm following:
 
 My goal is to let users eventually be able to:
 
-* View randomly selected cats
-* Rank cats according to their preferences
-* Save their rankings
-* View previous rankings
+* Choose the cutest cat out of 2 for 1v1 rounds until 1 remains
+* Save their rankings/cat royales
+* View previous rankings/cat royales
 * Create their own account
 
 ### Technologies
