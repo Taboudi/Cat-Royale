@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cat Royale 
 
-## Getting Started
+A website where users can rank randomly selected cats.
 
-First, run the development server:
+This is my first full web development project, built as a way to learn how a modern website works from development through deployment while doing something silly :)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Status
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Cat Royale is currently stil under development.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is the roadmamp i'm following:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* [x] Created the initial Next.js project
+* [x] Set up Git and GitHub
+* [x] Created the basic homepage
+* [ ] Fetch random cats from an API
+* [ ] Create the cat ranking interface
+* [ ] Add user accounts
+* [ ] Save user rankings
+* [ ] Deploy the website
+* [ ] Connect a custom domain
 
-## Learn More
+### Planned Features
 
-To learn more about Next.js, take a look at the following resources:
+My goal is to let users eventually be able to:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* View randomly selected cats
+* Rank cats according to their preferences
+* Save their rankings
+* View previous rankings
+* Create their own account
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Technologies
 
-## Deploy on Vercel
+Currently using:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Git
+* GitHub
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+More technologies will be added as I develop this website.
+
+### What I'm Learning
+
+I'm using this project to get more experience with:
+
+* Learning how to concretely put my web coding knowledge to use 
+* React and Next.js
+* TypeScript
+* Working with APIs
+* Git and GitHub
+* Databases
+* Authentication
+* Website deployment
+
+### Screenshots
+
+I'll add screenshots when the UI looks good
