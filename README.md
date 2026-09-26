@@ -32,14 +32,14 @@ More technologies will be added as I develop this website.
 
 I'm using this project to get more experience with:
 
-* Learning how to concretely put my web coding knowledge to use 
+* **Working with APIs** 
+* **Website deployment**
+* **Programming with ChatGPT**
 * React and Next.js
 * TypeScript
-* **Working with APIs**
+* Learning how to concretely put my web coding knowledge to use 
 * Git and GitHub
 * Databases
-* Authentication
-* **Website deployment**
 
 ### Screenshots
 
