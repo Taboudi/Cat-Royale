@@ -1,6 +1,20 @@
+import { ipAddress } from "@vercel/functions";
 import { CAT_COUNT, isCat, type Cat } from "@/lib/cats";
+import { catApiRatelimit } from "@/lib/ratelimit";
 
-export async function GET() {
+export async function GET(request: Request) {
+  const identifier = ipAddress(request) ?? "local-development";
+  const rateLimit = await catApiRatelimit.limit(identifier);
+
+  if (!rateLimit.success) {
+    const retryAfter = Math.max(1, Math.ceil((rateLimit.reset - Date.now()) / 1000));
+
+    return Response.json(
+      { error: "You're starting Royales too quickly. Please wait a moment and try again." },
+      { status: 429, headers: { "Retry-After": String(retryAfter) } }
+    );
+  }
+
   const apiKey = process.env.CAT_API_KEY;
 
   if (!apiKey) {
@@ -12,6 +26,7 @@ export async function GET() {
     const uniqueCats = new Map<string, Cat>();
     const signal = AbortSignal.timeout(15000);
 
+    // Request more batches until we have enough cats, with a maximum of 3 attempts.
     for (let attempt = 0; attempt < 3 && uniqueCats.size < CAT_COUNT; attempt++) {
       const url = new URL("https://api.thecatapi.com/v1/images/search");
 
@@ -39,6 +54,7 @@ export async function GET() {
       }
     }
 
+    // The retry loop has finished. Check whether we collected enough cats.
     if (uniqueCats.size < CAT_COUNT) {
       console.error(`Only ${uniqueCats.size} unique valid cats were retrieved.`);
       return Response.json({ error: "We couldn't load enough cats. Please try again." }, { status: 503 });
@@ -46,6 +62,7 @@ export async function GET() {
 
     const cats = [...uniqueCats.values()].slice(0, CAT_COUNT);
 
+    // Shuffle the cats before sending them to the browser.
     for (let index = cats.length - 1; index > 0; index--) {
       const randomIndex = Math.floor(Math.random() * (index + 1));
       [cats[index], cats[randomIndex]] = [cats[randomIndex], cats[index]];

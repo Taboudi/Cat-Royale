@@ -45,7 +45,8 @@ export default function Play() {
       const data: unknown = await response.json();
 
       if (!response.ok) {
-        setError(LOAD_ERROR);
+        const message = typeof data === "object" && data !== null && "error" in data && typeof data.error === "string" ? data.error : LOAD_ERROR;
+        setError(message);
         return;
       }
 
@@ -115,7 +116,7 @@ export default function Play() {
   if (!game) {
     return (
       <main className="mx-auto max-w-5xl space-y-6 p-6">
-        <Link href="/" className="underline">← Back to Homepage</Link>
+        <Link href="/" className="underline">← Back to Cat Royale</Link>
 
         <h1 className="text-3xl font-bold">Cat Royale</h1>
         <p>{CAT_COUNT} cats enter. One is crowned.</p>
@@ -135,9 +136,9 @@ export default function Play() {
 
     return (
       <main className="mx-auto max-w-3xl space-y-6 p-6 text-center">
-        <Link href="/" className="underline">← Back to Homepage</Link>
+        <Link href="/" className="underline">← Back to Cat Royale</Link>
 
-        <h1 className="text-4xl font-bold">Your Cat Royale</h1>
+        <h1 className="text-4xl font-bold">Your Cat Royale 👑</h1>
         <p>Meet your champion!</p>
 
         <Image src={champion.url} alt="Your Cat Royale champion" width={500} height={500} className="mx-auto aspect-square w-full max-w-lg object-contain" onError={() => setError(IMAGE_ERROR)} />
@@ -158,7 +159,7 @@ export default function Play() {
 
   return (
     <main className="mx-auto max-w-5xl space-y-6 p-6">
-      <Link href="/" className="underline">← Back to Homepage</Link>
+      <Link href="/" className="underline">← Back to Cat Royale</Link>
 
       <h1 className="text-3xl font-bold">Cat Royale</h1>
 
