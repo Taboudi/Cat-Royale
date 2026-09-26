@@ -45,7 +45,7 @@ I'm using this project to get more experience with:
 
 #### Homepage
 
-![Cat Royale homepage](docs/screenshots/homepage.png)
+![Cat Royale homepage](docs/screenshots/Homepage.png)
 
 #### Tournament
 
