@@ -8,25 +8,12 @@ This is my first full web development project, built as a way to learn how a mod
 
 Cat Royale works great but is still under development.
 
-This is the features i want to add to the project in the future:
+These are the features i want to add to the project in the future:
 
 *  Add user accounts
 *  Save winning cat
 *  Favourite Cats
 *  Share the winning cat's image
-
-### Technologies
-
-Currently using:
-
-* Next.js
-* React
-* TypeScript
-* Tailwind CSS
-* Git
-* GitHub
-
-More technologies will be added as I develop this website.
 
 ### What I'm Learning
 
