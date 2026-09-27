@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { PlayButton } from "@/components/play-button";
 
-export const metadata: Metadata = { title: "About" };
+export const metadata = {
+  title: "About",
+  description: "Learn about Cat Royale and why the project was built.",
+};
 
 export default function About() {
   return (

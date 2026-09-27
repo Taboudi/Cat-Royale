@@ -8,8 +8,24 @@ const figtree = Figtree({ subsets: ["latin"], variable: "--font-body", display: 
 const lilita = Lilita_One({ subsets: ["latin"], weight: "400", variable: "--font-display", display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "Cat Royale", template: "%s | Cat Royale" },
+  metadataBase: new URL("https://cat-royale.vercel.app"),
+  title: {
+    default: "Cat Royale",
+    template: "%s | Cat Royale",
+  },
   description: "Choose the cutest of them all. Pick your favourite in each duel until one cat remains.",
+  keywords: ["cats", "game", "cat game", "tournament", "Cat Royale"],
+  authors: [{ name: "Taboudi" }],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Cat Royale",
+    description: "Choose the cutest of them all. Pick your favourite in each duel until one cat remains.",
+    url: "/",
+    siteName: "Cat Royale",
+    type: "website",
+  },
 };
 
 export const viewport: Viewport = { themeColor: "#14171d", colorScheme: "dark" };
