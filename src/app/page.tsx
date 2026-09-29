@@ -12,7 +12,7 @@ export default function Home() {
         <p>Pick your favourite in each duel until one cat remains.</p>
       </div>
 
-      <div className="home-photos">
+      <div className="home-photos" data-nosnippet>
         <AccentIcon className="home-accent" />
 
         <div className="sample-photo sample-photo-first">
