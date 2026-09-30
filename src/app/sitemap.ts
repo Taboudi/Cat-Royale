@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://cat-royale.vercel.app";
+  const baseUrl = "https://catroyale.taboudi.dev";
 
   return [
     { url: baseUrl },

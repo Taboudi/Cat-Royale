@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://cat-royale.vercel.app/sitemap.xml",
+    sitemap: "https://catroyale.taboudi.dev/sitemap.xml",
   };
 }
