@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     template: "%s | Cat Royale",
   },
   description: "Choose the cutest of them all. Pick your favourite in each duel until one cat remains.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   keywords: ["cats", "game", "cat game", "tournament", "Cat Royale"],
   authors: [{ name: "Taboudi" }],
   alternates: {
